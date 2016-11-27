@@ -1,6 +1,51 @@
+
+
 describe("Objective", function() {
 
+		/*
+		building objective clas
+		*/
+		function objective(difficulty,data){
+			this.difficulty = difficulty;
+			this.data = data;
+			completed = false;
+		}
 
+		/*
+		sample data pulled from daily objective form
+		*/
+
+			var dailyobjective ={name:"trenton",
+														objective:[new objective('easy','get coffee'),new objective('easy','get groceries'),
+														new objective('easy','get food')]
+													}
+
+	describe("Data",function(){
+		/*
+		initializing a blank objective object to check that it has needed properties
+		*/
+		var instance = new objective();
+
+		/*
+		Checks that the new instance has properties
+		*/
+
+		it("should have difficulty,data,and completed properties",function(){
+
+						expect(instance.hasOwnProperty('difficulty')).toBe(true)
+										expect(instance.hasOwnProperty('data')).toBe(true)
+														expect(instance.hasOwnProperty('completed')).toBe(true)
+		})
+
+		it("should pull data from imput and place it in an object literal with a name and array of objectives",
+		function(){
+			
+		})
+
+
+
+
+	})
 	/*
 
 Render logic
@@ -37,8 +82,17 @@ Saving logic
 
 describe("Save",function(){
 
+	function savetest(name,data){
+		localStorage.setItem("data",data)
+	}
+
+
+
 	it("should save setup info when the user clicks done to local storage",function(){
-		expect("foo").toEqual('cow')
+
+
+		savetest("trenton",JSON.stringify(dailyobjective))
+		expect(JSON.parse(localStorage.getItem("data")).name).toEqual('trenton')
 
 	})
 	it("should save completed state to true on objective object if a user double clicks a rendered objective",
@@ -48,7 +102,7 @@ expect("foo").toEqual("cow")
 })
 it("should save completed objective to past objectives if the user double clicks a daily objective",
 function(){
-epect("foo").toEqual("cow")
+expect("foo").toEqual("cow")
 
 })
 
