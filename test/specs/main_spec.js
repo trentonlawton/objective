@@ -3,12 +3,12 @@
 describe("Objective", function() {
 
 		/*
-		building objective clas
+		building objective object
 		*/
 		function objective(difficulty,data){
 			this.difficulty = difficulty;
 			this.data = data;
-			completed = false;
+			this.completed = false;
 		}
 
 		/*
@@ -39,7 +39,7 @@ describe("Objective", function() {
 
 		it("should pull data from imput and place it in an object literal with a name and array of objectives",
 		function(){
-			
+			expect("foo").toBe("bar")
 		})
 
 
