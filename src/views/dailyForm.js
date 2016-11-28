@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './dailyForm.css';
+import React, {Component} from 'react';
+
+import '../styles/dailyForm.css';
 
 class dailyForm extends Component {
   render() {
