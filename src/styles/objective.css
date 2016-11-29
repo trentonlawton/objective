@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+.objectiveContainer{
+display: block;
+margin: 0 auto;
+width: 30%;
+}
+body{
+  background-color: #222;
+}
+
+span{
+  color: #fff;
+  background-color: green;
+  font-size: .5em;
+position: relative;
+bottom: 1em;
+
+padding: .2em;
+width: 1em;
+height: 1em;
+}
+p{
+  color:#fff;
+  font-family: Lato,sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+
+}
